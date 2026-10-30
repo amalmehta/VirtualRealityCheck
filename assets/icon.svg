@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#F6F1E7"/>
+  <!-- Left half of the mountain is pixels; right half is the real slope. -->
+  <path d="M8 50h24V14h-4v6h-4v6h-4v6h-4v6h-4v6h-4z" fill="#2B6CA3"/>
+  <path d="M32 14 56 50H32z" fill="#B5633F"/>
+</svg>

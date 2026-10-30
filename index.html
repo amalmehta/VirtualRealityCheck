@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Are you living in a virtual world, or the real one? Guess eight numbers about your last week, then look them up.">
+  <meta name="color-scheme" content="light dark">
+  <title>Virtual Reality Check</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-180.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/newsreader-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js"></script>
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <div id="splash" aria-hidden="true"><img src="assets/icon.svg" alt="" width="72" height="72"></div>
+
+  <header class="top">
+    <button class="brand" id="brand" type="button">
+      <img src="assets/icon.svg" alt="" width="24" height="24">
+      <span>Virtual Reality Check</span>
+    </button>
+    <button class="icon-button" id="open-settings" type="button" aria-label="Settings" title="Settings (⌘,)">
+      <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h10M18 7h2M4 17h2M10 17h10" /><circle cx="16" cy="7" r="2" /><circle cx="8" cy="17" r="2" /></svg>
+    </button>
+  </header>
+
+  <main id="main" tabindex="-1"></main>
+
+  <button class="feedback-tab" id="open-feedback" type="button">Feedback</button>
+
+  <template id="surprise-formula">
+    <math class="equation" display="block" aria-label="s equals the absolute value of a minus g, divided by the larger of the absolute value of g and f">
+      <mrow><mi>s</mi><mo>=</mo><mfrac><mrow><mo lspace="0" rspace="0">|</mo><mi>a</mi><mo>−</mo><mi>g</mi><mo lspace="0" rspace="0">|</mo></mrow><mrow><mi>max</mi><mo>(</mo><mo lspace="0" rspace="0">|</mo><mi>g</mi><mo lspace="0" rspace="0">|</mo><mo>,</mo><mi>f</mi><mo>)</mo></mrow></mfrac></mrow>
+    </math>
+  </template>
+
+  <dialog id="settings" aria-labelledby="settings-title">
+    <div class="dialog-head">
+      <h2 id="settings-title">Settings</h2>
+      <button class="icon-button" type="button" data-close aria-label="Close">×</button>
+    </div>
+    <h3>Appearance</h3>
+    <div class="segmented" role="radiogroup" aria-label="Appearance">
+      <label><input type="radio" name="theme" value="system"><span>System</span></label>
+      <label><input type="radio" name="theme" value="light"><span>Light</span></label>
+      <label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+    </div>
+    <h3>Your data</h3>
+    <p class="quiet">Your answers are stored in this browser and nowhere else. No account, no server, no analytics. Anyone using this browser profile can see them. <span id="data-summary"></span></p>
+    <div class="row">
+      <button class="button" id="export-data" type="button">Export</button>
+      <button class="button" id="import-data" type="button">Import</button>
+      <input id="import-file" type="file" accept="application/json,.json" hidden>
+      <button class="button danger" id="delete-data" type="button">Delete everything</button>
+    </div>
+    <p class="quiet" id="data-message" role="status"></p>
+  </dialog>
+
+  <dialog id="feedback" aria-labelledby="feedback-title">
+    <div class="dialog-head">
+      <h2 id="feedback-title">Feedback</h2>
+      <button class="icon-button" type="button" data-close aria-label="Close">×</button>
+    </div>
+    <p>Something wrong, or a number that misled you? Open an issue on GitHub. It is public, and nothing from your answers is attached.</p>
+    <a class="button primary" href="https://github.com/amalmehta/VirtualRealityCheck/issues/new" target="_blank" rel="noopener noreferrer">Open GitHub</a>
+  </dialog>
+</body>
+</html>
