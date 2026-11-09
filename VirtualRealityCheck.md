@@ -42,6 +42,14 @@ META-INSTRUCTIONS:
  widget's notes or my own answer. Keep the message around it to a sentence or
  two.>
 
+<Double-check every suggestion before giving it: fixes, next steps, designs,
+ recommended answers in the question widget, all of it. Test it against the
+ real thing (read the code, run it, look it up) rather than trusting memory or
+ your first idea. Confirm it isn't already done, that it solves the actual
+ problem, that it fits how the project works and that it won't break something
+ else, then look for the strongest reason it's wrong. Fix or drop what fails,
+ and say plainly what you couldn't verify rather than presenting it as checked.>
+
 <Explain so I learn the skill, not just the answer. Write explanations that
  anyone with a basic grounding in software, machine learning, neuroscience or
  psychology could follow: name the underlying idea in plain words, give an
@@ -332,6 +340,22 @@ META-INSTRUCTIONS:
 
 <Keep the changelog at the bottom current.>
 
+<Before building, list the lessons from this spec that apply and how you will act on each. At the end, note which you followed.>
+
+<When the project's kind is unclear, such as whether it is a tool or written content, ask before building.>
+
+<Before building, settle the deliverable's form, target platforms and minimum versions, packaging and signing, and hosting. When the brief conflicts with standing defaults, ask which wins.>
+
+<Before any paid API call, settle who pays, a spending cap, test versus live mode and where keys live, and keep a mock mode so the build runs without spending.>
+
+<When the look, concept or UI direction is open, show two or three concrete mockups or concepts to pick from before building. Never redesign existing UI without asking.>
+
+<Ask early for real sample inputs and working credentials, and check against the live API, model or tool as soon as one path works. When none exist, say so rather than inventing them silently.>
+
+<Before building, write down done criteria with concrete thresholds or formulas for every vague term, plus a list of what is explicitly deferred, and confirm both with me.>
+
+<Before building anything that judges, scores or generates content, decide with me whether an AI model or deterministic rules produce it, weighing cost, explainability and reproducibility, and which model is the default.>
+
 SHORTCUTS:
 
 <Shortcuts for this project only, one per line as "- name — what it does". They win over the shared ones in Shortcuts.md.>
@@ -432,3 +456,4 @@ CHANGELOG:
 - 2026-10-28 — added meta-instruction: privacy, security and auth come first in anything people use (minimal data, encryption, Keychain secrets, proven sign-in, server-side checks, a threat-model pass before done)
 - 2026-10-28 — added a SHORTCUTS section, shared with every project through its own Shortcuts.md (kept current) and CLAUDE.md, alongside the project's own; first shortcut: N,N,N (N things to cut, add and improve)
 - 2026-10-27 — the meta doc updates itself: changes the meta report finds evidence for are adopted for every new project as soon as it's written
+- 2026-11-09 — updated the meta-instructions to the current meta doc
